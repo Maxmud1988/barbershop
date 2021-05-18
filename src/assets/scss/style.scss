@@ -1,6 +1,11 @@
 @import "fonts";
 @import "variables";
 @import "viewports";
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 
 img {
   max-width: 100%;
@@ -35,3 +40,4 @@ img {
 @import "bloks/header.scss";
 @import "bloks/nav.scss";
 @import "bloks/stats.scss";
+@import "bloks/advantages.scss";
