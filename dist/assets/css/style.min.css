@@ -1,1 +1,100 @@
-body{background-color:#000;font-size:21px;color:#fff}
+@font-face {
+  font-family: "PT Sans Narrow";
+  src: url("../fonts/PTSans-Narrow.woff2") format("woff2"), url("../fonts/PTSans-Narrow.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "PT Sans Narrow";
+  src: url("../fonts/PTSans-NarrowBold.woff2") format("woff2"), url("../fonts/PTSans-NarrowBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+.page {
+  height: 100%;
+  font-size: 18px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  line-height: 27px; }
+
+.page__body {
+  min-height: 100%;
+  margin: 0;
+  background-color: #f8f5f2;
+  color: #000000; }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: #242424;
+  color: #ffffff; }
+
+.header__logo {
+  height: 85px; }
+  @media (min-width: 768px) {
+    .header__logo {
+      order: 2;
+      height: 400px; } }
+  @media (min-width: 1200px) {
+    .header__logo {
+      height: 648px; } }
+
+.nav {
+  outline: 5px solid red;
+  outline-offset: -5px; }
+
+@media (min-width: 768px) {
+  .nav__toggle {
+    display: none; } }
+
+@media (min-width: 768px) {
+  .nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 640px;
+    margin: 0 auto; } }
+
+@media (min-width: 1200px) {
+  .nav__wrapper {
+    width: 960px; } }
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .nav__list a {
+    color: #ffffff; }
+
+.site-list {
+  outline: 5px solid green;
+  outline-offset: -5px; }
+  @media (min-width: 768px) {
+    .site-list {
+      width: 570px; } }
+  @media (min-width: 1200px) {
+    .site-list {
+      width: 780px; } }
+
+.user-list {
+  outline: 5px solid green;
+  outline-offset: -5px; }
+  @media (min-width: 768px) {
+    .user-list {
+      width: 60px; } }

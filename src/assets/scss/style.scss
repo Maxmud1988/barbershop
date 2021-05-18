@@ -1,5 +1,36 @@
-body {
-    background-color: black;
-    font-size: 21px;
-    color: white;
+@import "fonts";
+@import "variables";
+@import "viewports";
+
+img {
+  max-width: 100%;
+  height: auto;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.page {
+  height: 100%;
+  font-size: 18px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  line-height: 27px;
+}
+
+.page__body {
+  min-height: 100%;
+  margin: 0;
+  background-color: $lightgrey;
+  color: $black;
+}
+
+@import "bloks/header.scss";
+@import "bloks/nav.scss";
