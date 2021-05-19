@@ -1,4 +1,5 @@
 .nav {
+  display: block;
 }
 .nav__toggle {
   @media (min-width: $tablet-width) {
@@ -22,11 +23,14 @@
   list-style: none;
   a {
     color: $white;
+    text-decoration: none;
   }
 }
 .site-list {
   @media (min-width: $tablet-width) {
     width: 570px;
+    display: flex;
+    justify-content: space-between;
   }
   @media (min-width: $desktop-width) {
     width: 780px;

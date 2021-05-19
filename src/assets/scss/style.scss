@@ -29,7 +29,11 @@ img {
   font-family: "PT Sans Narrow", "Arial", sans-serif;
   line-height: 27px;
 }
-
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .page__body {
   min-height: 100%;
   margin: 0;
@@ -41,3 +45,5 @@ img {
 @import "bloks/nav.scss";
 @import "bloks/stats.scss";
 @import "bloks/advantages.scss";
+@import "bloks/news.scss";
+@import "bloks/button.scss";

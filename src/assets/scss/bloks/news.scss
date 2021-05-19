@@ -1,0 +1,140 @@
+.news {
+  padding-top: 65px;
+  border-bottom: 1px solid #e5ddd5;
+}
+.news__wrapper {
+  padding: 35px 20px;
+
+  position: relative;
+  @media (min-width: $tablet-width) {
+    padding: 0px 64px;
+    padding-top: 50px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+    margin: auto;
+    padding: 0px 110px;
+    padding-top: 50px;
+  }
+}
+.news__title {
+  margin: 0;
+  padding-left: 70px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  @media (max-width: $mobile-width-only) {
+    text-align: center;
+    padding: 0;
+  }
+}
+.news__list {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.news__item {
+  text-decoration: none;
+  color: $black;
+  display: flex;
+  margin: 16px 0;
+
+  &:hover {
+    color: #826550;
+    text-decoration: underline;
+
+    time,
+    time::after {
+      background-color: #826550;
+    }
+  }
+  &:active {
+    time,
+    time::after,
+    b {
+      color: rgba($white, 0.3);
+    }
+  }
+
+  &:first-child {
+    border-bottom: 1px solid #e5ddd5;
+    @media (min-width: $tablet-width) {
+      border: none;
+    }
+  }
+
+  &--show {
+    display: none;
+    @media (min-width: $desktop-width) {
+      display: flex;
+    }
+  }
+  @media (min-width: $tablet-width) {
+    margin: 58px 0;
+    width: 46%;
+  }
+  @media (min-width: $desktop-width) {
+    width: 30%;
+    margin: 58px 0;
+    margin-right: 20px;
+  }
+}
+.news__date,
+.news__day {
+  display: block;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+  padding-top: 2px;
+}
+.news__date {
+  flex: 0 0 50px;
+  height: 50px;
+  margin-top: 10px;
+  background-color: $darkgrey;
+  position: relative;
+  margin-bottom: 16px;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 15px;
+    background-color: $darkgrey;
+    position: absolute;
+    bottom: -15px;
+    left: 0px;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+  }
+}
+
+.news__day {
+  font-size: 30px;
+  font-weight: 700;
+}
+.news__text {
+  margin: 0;
+  padding-left: 20px;
+}
+.news__to-all {
+  width: 100%;
+  margin-top: 35px;
+  @media (min-width: $tablet-width) {
+    width: 150px;
+    position: absolute;
+    top: 0px;
+    right: 64px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 150px;
+    position: absolute;
+    top: 0px;
+    right: 110px;
+  }
+}

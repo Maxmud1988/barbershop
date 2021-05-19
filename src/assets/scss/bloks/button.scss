@@ -1,0 +1,25 @@
+.button {
+  display: inline-block;
+  padding: 13px 0;
+  border: 1px solid red;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $black;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+
+  border: 1px solid #e5ddd5;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: #d5c9bd;
+  }
+  &:active {
+    background-color: #d5c9bd;
+    color: rgba($black, 0.3);
+  }
+}
