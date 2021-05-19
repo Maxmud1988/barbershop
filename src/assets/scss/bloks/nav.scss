@@ -1,5 +1,6 @@
 .nav {
   display: block;
+  background: $black;
 }
 .nav__toggle {
   @media (min-width: $tablet-width) {
@@ -29,8 +30,6 @@
 .site-list {
   @media (min-width: $tablet-width) {
     width: 570px;
-    display: flex;
-    justify-content: space-between;
   }
   @media (min-width: $desktop-width) {
     width: 780px;

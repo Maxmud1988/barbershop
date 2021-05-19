@@ -55,11 +55,26 @@ img {
   flex-direction: column;
   background-color: #242424;
   color: #ffffff; }
+  @media (min-width: 768px) {
+    .header {
+      background: #000000 url("../images/back-desktop.jpg") no-repeat;
+      background-position: center -9px;
+      background-size: cover; } }
 
 .header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid red;
   height: 85px; }
+  .header__logo img {
+    height: 30px; }
+    @media (min-width: 1200px) {
+      .header__logo img {
+        margin-top: 57px; } }
   @media (min-width: 768px) {
     .header__logo {
+      align-items: flex-start;
       order: 2;
       height: 400px; } }
   @media (min-width: 1200px) {
@@ -67,7 +82,8 @@ img {
       height: 648px; } }
 
 .nav {
-  display: block; }
+  display: block;
+  background: #000000; }
 
 @media (min-width: 768px) {
   .nav__toggle {
@@ -94,9 +110,7 @@ img {
 
 @media (min-width: 768px) {
   .site-list {
-    width: 570px;
-    display: flex;
-    justify-content: space-between; } }
+    width: 570px; } }
 
 @media (min-width: 1200px) {
   .site-list {

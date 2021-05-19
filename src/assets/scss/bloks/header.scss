@@ -3,11 +3,28 @@
   flex-direction: column;
   background-color: #242424;
   color: $white;
+  @media (min-width: $tablet-width) {
+    background: $black url("../images/back-desktop.jpg") no-repeat;
+    background-position: center -9px;
+    background-size: cover;
+  }
 }
 .header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid red;
   height: 85px;
 
+  img {
+    height: 30px;
+    @media (min-width: $desktop-width) {
+      margin-top: 57px;
+    }
+  }
+
   @media (min-width: $tablet-width) {
+    align-items: flex-start;
     order: 2;
     height: 400px;
   }
