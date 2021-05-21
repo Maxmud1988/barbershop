@@ -22,21 +22,26 @@
     <a class="header__logo">
       <img src="assets\images\logo-mobile.svg" width="220" height="30" alt="Логотип сайта">
     </a>
-    <nav class="nav">
-      <button class="nav__toggle" type="button">sssss
+    <nav class="nav nav--closed nav--nojs">
+      <button class="nav__toggle" type="button">
         <span class="visually-hidden">Открыт меню</span>
       </button>
       <div class="nav__wrapper">
         <ul class="nav__list site-list">
           <li class="site-list__item site-list__item--active"><a>Главная</a></li>
-          <li class="site-list__item"><a href="#">Наши работы</a></li>
+          <li class="site-list__item "><a href="#">Наши работы</a></li>
           <li class="site-list__item"><a href="#">Записатся</a></li>
           <li class="site-list__item"><a href="#">Контакты</a></li>
           <li class="site-list__item"><a href="#">HTML Academy</a></li>
+  
         </ul>
         <ul class="nav__list user-list">
           <li class="user-list__item">
-            <a class="user-list__login" href="login.html">Войти</a>
+            <a class="user-list__login" href="login.html">
+              <svg class="user-list__login-icon" width="16" height="16" viewBox="0 0 16 16">
+                <use xlink:href="assets/images/sprite.svg#login-icon"></use>
+              </svg>
+              <span>Войти</span></a>
           </li>
         </ul>
       </div>

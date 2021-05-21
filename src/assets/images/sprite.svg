@@ -1,0 +1,6 @@
+<svg width="0" height="0" class="hidden">
+  <symbol  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="login-icon">
+      <path d="M7 2h7v12H7v2h9V0H7v2z"></path>
+      <path d="M7 9H0V7h7V4l4 4-4 4V9z"></path>
+  </symbol>
+</svg>
