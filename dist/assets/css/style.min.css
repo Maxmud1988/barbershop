@@ -69,7 +69,7 @@ img {
   height: 85px; }
   .header__logo img {
     height: 30px; }
-    @media (min-width: 1200px) {
+    @media (min-width: 768px) {
       .header__logo img {
         margin-top: 57px; } }
   @media (min-width: 768px) {
