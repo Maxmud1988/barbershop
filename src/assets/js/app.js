@@ -1,5 +1,5 @@
-const nav = document.querySelector('.nav');
-const navToggle = document.querySelector(".nav__toggle");
+const nav = document.querySelector('.nav'),
+  navToggle = document.querySelector(".nav__toggle");
 
 nav.classList.remove('nav--nojs');
 navToggle.addEventListener('click', function () {
@@ -11,3 +11,4 @@ navToggle.addEventListener('click', function () {
     nav.classList.remove('nav--opened');
   }
 })
+
