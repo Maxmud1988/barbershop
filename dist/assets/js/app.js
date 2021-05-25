@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("const nav = document.querySelector('.nav'),\n  navToggle = document.querySelector(\".nav__toggle\");\n\nnav.classList.remove('nav--nojs');\nnavToggle.addEventListener('click', function () {\n  if (nav.classList.contains('nav--closed')) {\n    nav.classList.remove('nav--closed');\n    nav.classList.add('nav--opened');\n  } else {\n    nav.classList.add('nav--closed');\n    nav.classList.remove('nav--opened');\n  }\n})\n\n\n\n//# sourceURL=webpack:///./src/assets/js/app.js?");
+eval("const nav = document.querySelector('.nav'),\n  navToggle = document.querySelector(\".nav__toggle\"),\n  slides = document.querySelectorAll('.slider__item'),\n  btns = document.querySelectorAll('.slider__toggle');\n\nnav.classList.remove('nav--nojs');\nnavToggle.addEventListener('click', function () {\n  if (nav.classList.contains('nav--closed')) {\n    nav.classList.remove('nav--closed');\n    nav.classList.add('nav--opened');\n  } else {\n    nav.classList.add('nav--closed');\n    nav.classList.remove('nav--opened');\n  }\n})\n\nlet currentSlide = 1;\n\nconst manualNav = function (manual) {\n  slides.forEach((slide) => {\n    slide.classList.remove('slider__item--active');\n\n    btns.forEach((btn) => {\n      btn.classList.remove('slider__toggle--current');\n    });\n\n  });\n  slides[manual].classList.add('slider__item--active');\n  btns[manual].classList.add('slider__toggle--current');\n\n\n}\nconsole.log(btns)\nbtns.forEach((btn, i) => {\n  btn.addEventListener('click', () => {\n    manualNav(i);\n    currentSlide = i;\n  });\n});\n\n\n//# sourceURL=webpack:///./src/assets/js/app.js?");
 
 /***/ }),
 
