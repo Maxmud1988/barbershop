@@ -1,7 +1,9 @@
 const nav = document.querySelector('.nav'),
   navToggle = document.querySelector(".nav__toggle"),
-  slides = document.querySelectorAll('.slider__item'),
-  btns = document.querySelectorAll('.slider__toggle');
+  slides = document.querySelectorAll('.advantages__item'),
+  btns = document.querySelectorAll('.advantage__toggle'),
+  slidesRev = document.querySelectorAll('.reviews__item'),
+  btnsRev = document.querySelectorAll('.reviews__toggle');
 
 nav.classList.remove('nav--nojs');
 navToggle.addEventListener('click', function () {
@@ -27,13 +29,12 @@ const manualNav = function (manual) {
   });
   slides[manual].classList.add('slider__item--active');
   btns[manual].classList.add('slider__toggle--current');
-
-
 }
-console.log(btns)
+
 btns.forEach((btn, i) => {
   btn.addEventListener('click', () => {
     manualNav(i);
     currentSlide = i;
   });
 });
+

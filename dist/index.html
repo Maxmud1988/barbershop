@@ -19,9 +19,13 @@
 <body class="page__body">
 
   <header class="header">
-    <a class="header__logo">
-      <img src="assets\images\logo-mobile.svg" width="220" height="30" alt="Логотип сайта">
-    </a>
+    <div class="header__logo">
+      <picture>
+        <source media="(min-width:1200px)" srcset="assets/images/logo-desktop.svg">
+        <source media="(min-width:768px)" srcset="assets/images/logo-tablet.svg">
+        <img src="assets/images/logo-mobile.svg" width="226" height="30" alt="">
+      </picture>
+    </div>
     <nav class="nav nav--closed nav--nojs">
       <button class="nav__toggle" type="button">
         <span class="visually-hidden">Открыт меню</span>
@@ -141,9 +145,9 @@
         </ul>
       </div>
       <div class="advantages__toggles slider__toggles">
-        <button class="slider__toggle slider__toggle--current" type="button"></button>
-        <button class="slider__toggle" type="button"></button>
-        <button class="slider__toggle" type="button"></button>
+        <button class="advantage__toggle  slider__toggle slider__toggle--current" type="button"></button>
+        <button class="advantage__toggle  slider__toggle" type="button"></button>
+        <button class="advantage__toggle slider__toggle" type="button"></button>
       </div>
     </section>
     <section class="news">
@@ -183,15 +187,16 @@
   
     </section>
     <section class="reviews">
-      <div class="reviews__wrapper slider">
+      <div class="reviews__wrapper slider2">
         <h2 class="reviews__title">
           Отзывы о нас
         </h2>
         <a class="reviews__write button" href="form.html">Оставить свой</a>
-        <div class="reviews__list slider__list">
-          <blockquote class="reviews__item slider__item">
-            <img class="reviews__author-image" src="assets/images/picture-travis-mobile@1x.jpg" width="50" height="50"
-              alt="Фото Тревиса Беккера">
+        <div class="reviews__list slider2__list">
+          <blockquote class="reviews__item slider2__item ">
+            <div class="reviews__author-image">
+              <img src="assets/images/picture-travis-desktop@1x.jpg" width="50" height="50" alt="Фото Тревиса Беккера">
+            </div>
             <div class="reviews__author-info">
               <cite class="reviews__author-name">Тревиса Беккер</cite>
               <p class="reviews__text">
@@ -199,34 +204,15 @@
               </p>
             </div>
           </blockquote>
-          <blockquote class="reviews__item slider__item">
-            <img class="reviews__author-image" src="assets/images/picture-travis-mobile@1x.jpg" width="50" height="50"
-              alt="Фото Тревиса Беккера">
-            <div class="reviews__author-info">
-              <cite class="reviews__author-name">Джон смит</cite>
-              <p class="reviews__text">
-                отличное стрижку мне сделали ребята.
-              </p>
-            </div>
-          </blockquote>
-          <blockquote class="reviews__item slider__item">
-            <img class="reviews__author-image" src="assets/images/picture-travis-mobile@1x.jpg" width="50" height="50"
-              alt="Фото Тревиса Беккера">
-            <div class="reviews__author-info">
-              <cite class="reviews__author-name">Иван Бородайло</cite>
-              <p class="reviews__text">
-                В Бородинском ваща борода в надёжных руках!
-              </p>
-            </div>
-          </blockquote>
-          <button class="reviews__prev" type="button">Предыдущий</button>
-          <button class="reviews__next" type="button">Следующий</button>
+  
+          <button class="reviews__prev" type="button"></button>
+          <button class="reviews__next" type="button"></button>
         </div>
-        <p class="reviews__toggles slider__toggles">
-          <button class="reviews__toggle slider__toggle--current" type="button">1</button>
-          <button class="reviews__toggle slider__toggle--current" type="button">2</button>
-          <button class="reviews__toggle slider__toggle--current" type="button">3</button>
-        </p>
+        <div class="reviews__toggles slider2__toggles">
+          <button class="reviews__toggle slider2__toggle slider2__toggle--current" type="button"></button>
+          <button class="reviews__toggle slider2__toggle " type="button"></button>
+          <button class="reviews__toggle slider2__toggle" type="button"></button>
+        </div>
       </div>
     </section>
   </main>
@@ -238,8 +224,9 @@
         <b class="contacts__title">Барбершоп "Бородинский"</b>
         <p class="contacts__text">
           г. Санкт-Петербург, ул. Большая Конюшенная 19/8 <br>
-          <a class="contacts__phone" href="tel:+78125556666">
-            <span class="contacts__phone-mobile">+7 (812) 555-66-66</span>
+          <a class="contacts__phone button button--no" href="tel:+78125556666">
+            <span class="contacts__phone-mobile">Tel:</span>
+            +7 (812) 555-66-66
           </a>
         </p>
       </div>
@@ -248,14 +235,32 @@
           Давайте дружит
         </b>
         <ul class="social__list">
-          <li class="social__item"><a href="#" class="social__link social__link--vkontakte">Мы в контакте</a></li>
-          <li class="social__item"><a href="#" class="social__link social__link--facebok">Мы в фейсбуке</a></li>
-          <li class="social__item"><a href="#" class="social__link social__link--instagram">Мы в инстаграме</a></li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--vkontakte">
+              <svg class="social__link--icon" width="23" height="26" viewBox="0 0 23 26">
+                <use xlink:href="assets/images/sprite.svg#vk-icon"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--facebok">
+              <svg class="social__link--icon" width="18" height="39" viewBox="0 0 18 39">
+                <use xlink:href="assets/images/sprite.svg#fb-icon"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--instagram">
+              <svg class="social__link--icon" width="36" height="36" viewBox="0 0 36 36">
+                <use xlink:href="assets/images/sprite.svg#instagram-icon"></use>
+              </svg>
+            </a>
+          </li>
         </ul>
       </div>
       <div class="footer__copyright copyright">
         <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="#">HTML Academy</a>
+        <a class="copyright__link button " href="#">HTML Academy</a>
       </div>
     </div>
   </footer>

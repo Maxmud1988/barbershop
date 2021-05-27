@@ -68,14 +68,6 @@ img {
     color: #ffffff;
 }
 
-@media (min-width: 768px) {
-    .header {
-        background: #000000 url("../images/back-desktop.jpg") no-repeat;
-        background-position: center -9px;
-        background-size: cover;
-    }
-}
-
 .header__logo {
     display: -ms-flexbox;
     display: flex;
@@ -101,6 +93,17 @@ img {
         -ms-flex-order: 2;
         order: 2;
         height: 400px;
+        background: #000000 url("../images/back-desktop.jpg") no-repeat;
+        background-position: center -9px;
+        background-size: cover;
+    }
+}
+
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+    .header__logo {
+        background-image: url("../images/back-desktop@2x.jpg");
+        background-size: 1338px auto;
+        background-size: cover;
     }
 }
 
@@ -1151,4 +1154,418 @@ img {
 .button:active {
     background-color: #d5c9bd;
     color: rgba(0, 0, 0, 0.3);
+}
+
+.reviews__wrapper {
+    padding: 27px 20px;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .reviews__wrapper {
+        margin: auto;
+        margin: 50px 0;
+        padding: 0px 64px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .reviews__wrapper {
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding: 0;
+        padding: 0 20px;
+        width: 1000px;
+    }
+}
+
+.reviews__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .reviews__title {
+        text-align: left;
+        font-size: 40px;
+        line-height: 30px;
+    }
+}
+
+.reviews__write {
+    width: 150px;
+    position: absolute;
+    top: -10px;
+    right: 64px;
+}
+
+@media (max-width: 767px) {
+    .reviews__write {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .reviews__write {
+        right: 20px;
+    }
+}
+
+.reviews__list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 28px 0;
+}
+
+@media (min-width: 768px) {
+    .reviews__list {
+        margin-top: 50px;
+        padding: 30px 0;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+}
+
+.reviews__item {
+    margin: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    .reviews__item {
+        padding: 0 80px;
+    }
+}
+
+.reviews__author-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    .reviews__author-image {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin: 0;
+        margin-right: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .reviews__author-image {
+        width: 249px;
+        height: 160px;
+        border-radius: 0;
+        margin: 0;
+        margin-right: 70px;
+    }
+}
+
+.reviews__author-name {
+    margin: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 27px;
+    text-align: center;
+}
+
+.reviews__text {
+    margin: 0;
+    padding-top: 10px;
+}
+
+.reviews__prev, .reviews__next {
+    display: block;
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    outline: 0;
+    border-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media (max-width: 767px) {
+    .reviews__prev, .reviews__next {
+        display: none;
+    }
+}
+
+.reviews__prev::before, .reviews__next::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
+.reviews__prev {
+    background: url("../images/left arrow.png") no-repeat center;
+}
+
+.reviews__next {
+    left: auto;
+    right: 0;
+    background: url("../images/right arrow.png") no-repeat center;
+}
+
+.reviews__toggles {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.reviews__toggles .slider2__toggle--current {
+    background-color: #000;
+}
+
+@media (min-width: 768px) {
+    .reviews__toggles {
+        margin: 0;
+    }
+}
+
+.reviews__toggle {
+    margin: 0;
+    padding: 0;
+    margin-right: 15px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 2px solid #000;
+    outline: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.footer {
+    background-color: #292929;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    .footer:after {
+        content: "";
+        width: 100%;
+        height: 50px;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        background-color: #f8f5f2;
+        -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+        clip-path: polygon(50% 100%, 0 0, 100% 0);
+    }
+}
+
+.footer__wrapper {
+    padding: 0 20px;
+    padding-top: 83px;
+    padding-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+    .footer__wrapper {
+        padding: 0 64px;
+        padding-top: 50px;
+        padding-bottom: 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer__wrapper {
+        width: 960px;
+        padding-right: 0;
+        padding-left: 0;
+        margin: auto;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+.footer__contacts {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .footer__contacts {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        text-align: left;
+    }
+}
+
+.footer__social {
+    margin: 30px 0;
+}
+
+@media (min-width: 768px) {
+    .footer__social {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        margin: 0;
+        margin-top: 45px;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer__copyright {
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
+}
+
+.contacts {
+    color: #fff;
+}
+
+.contacts__title {
+    margin: 0;
+    font-weight: 700;
+}
+
+.contacts__text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.contacts__phone {
+    display: block;
+    font-weight: normal;
+    color: inherit;
+    border-color: rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .contacts__phone {
+        padding: 0;
+        border: none;
+        margin: 0;
+        text-align: left;
+        text-transform: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .contacts__phone-mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .social {
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social .social__title {
+        margin: 0;
+        display: block;
+        margin-bottom: 15px;
+        color: #fff;
+        text-align: center;
+    }
+}
+
+.social__title {
+    display: none;
+}
+
+.social__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.social__item {
+    width: 100%;
+    height: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.social__item:nth-child(2) {
+    border-left: none;
+    border-right: none;
+}
+
+@media (min-width: 1200px) {
+    .social__item {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.social__link--icon {
+    fill: #fff;
+}
+
+.social__link--vkontakte {
+    width: 23px;
+    height: 26px;
+}
+
+.social__link--facebok {
+    width: 18px;
+    height: 39px;
+}
+
+.social__link--instagram {
+    width: 36px;
+    height: 36px;
+}
+
+.copyright {
+    color: #fff;
+}
+
+.copyright__text {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.copyright__link {
+    display: block;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: inherit;
+}
+
+@media (min-width: 1200px) {
+    .copyright__link {
+        width: 150px;
+    }
 }
